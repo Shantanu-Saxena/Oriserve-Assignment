@@ -1,0 +1,10 @@
+.listContainer {
+  margin-top: 130px;
+}
+
+.ImageCell {
+  margin: 10px;
+  height: 260px;
+  width: 260px;
+  object-fit: cover;
+}

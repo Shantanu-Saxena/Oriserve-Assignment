@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import SearchBar from "./components/SearchBarHeader/SearchBarHeader";
+import ImageList from "./components/ImageList/ImageList";
+import { useState } from "react";
 
 function App() {
+  const [searchText, setSearchText] = useState("");
+  const [searchHistoryList, setSearchHistoryList] = useState(
+    JSON.parse(localStorage.getItem("searchHistory")) ?? []
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchBar
+        searchText={searchText}
+        setSearchText={setSearchText}
+        searchHistoryList={searchHistoryList}
+      />
+      <ImageList
+        searchText={searchText.trim()}
+        searchHistoryList={searchHistoryList}
+        setSearchHistoryList={setSearchHistoryList}
+      />
     </div>
   );
 }
