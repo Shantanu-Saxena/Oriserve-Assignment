@@ -105,7 +105,11 @@ function ImageList({ searchText, searchHistoryList, setSearchHistoryList }) {
                 p: 4,
               }}
             >
-              <img src={popUpImage} alt="no-preview" />
+              <img
+                src={popUpImage}
+                style={{ width: "100%" }}
+                alt="no-preview"
+              />
             </Box>
           </Modal>
         </>

@@ -14,4 +14,11 @@
 .inputBox {
   background-color: white;
   border-radius: 5px;
+  width: 35%;
+}
+
+@media screen and (max-width: 600px) {
+  .inputBox {
+    width: 80%;
+  }
 }

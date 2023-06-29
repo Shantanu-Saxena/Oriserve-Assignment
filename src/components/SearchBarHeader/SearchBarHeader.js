@@ -23,7 +23,6 @@ function SearchBarHeader({ searchText, setSearchText, searchHistoryList }) {
         value={searchText}
         inputValue={searchText}
         size="small"
-        sx={{ width: "35%" }}
         placeholder="Search Here..."
       />
     </div>
